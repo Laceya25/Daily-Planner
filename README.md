@@ -15,3 +15,4 @@ Laceys Daily Planner
 
  ## Deployment Link 
 
+https://laceya25.github.io/Super-Awesome-Daily-Planner/
