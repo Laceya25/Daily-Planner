@@ -3,8 +3,9 @@ var todaysDate = dayjs();
 $('#todaysDate').text(todaysDate.format('MMMM, dddd D'));
 
 //make function availble after load//
-$(document).ready(function (){
+$(document).ready(function() {
 
+//clicking save button//
   var saveBtn = $('.savBtn');
   saveBtn.on('click', function () {
 
@@ -18,6 +19,31 @@ $(document).ready(function (){
   localStorage.setitem(time, textEnter);
   
 });
+
+function getTime() {
+  //current-24hr clock//
+  var currentHour = dayjs().hour();
+  console.log(currentHour)
+
+  $('.time-block').each(function () {
+  var myHour = parseInt($(this).attr("id").split("-")[1]);
+
+  if (currentHour > myHour) {
+    //add past
+    $(this).addClass('past');
+  } else if (currentHour === myHour) {
+    //add present
+    $(this).removeClass('past');
+    $(this).addClass('present');
+  } else {
+    //add future
+    $(this).removeClass('past');
+    $(this).removeClass('present');
+    $(this).removeClass('future');
+  }
+  })
+}
+}
 
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
