@@ -2,6 +2,22 @@
 var todaysDate = dayjs();
 $('#todaysDate').text(todaysDate.format('MMMM, dddd D'));
 
+//make function availble after load//
+$(document).ready(function (){
+
+  var saveBtn = $('.savBtn');
+  saveBtn.on('click', function () {
+
+  //get values written//
+  var textEnter = $(this).siblings('.description').val();
+
+  //id of hour-x//
+  var time =$(this).parent().attr('id');
+
+  //set var into local//
+  localStorage.setitem(time, textEnter);
+  
+});
 
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
