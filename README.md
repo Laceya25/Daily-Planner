@@ -7,7 +7,7 @@ Laceys Daily Planner
 
  ## Credit 
 
- Big help to my study group, Christina, Blair, BJ. Watching them figure out their own bugs helped me work through mine. 
+ Big help from my study group, Christina, Blair, BJ. Watching them figure out their own bugs helped me work through mine. 
 
  ## Screenshot 
 
@@ -15,4 +15,3 @@ Laceys Daily Planner
 
  ## Deployment Link 
 
- 
