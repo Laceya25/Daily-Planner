@@ -28,7 +28,7 @@ function getTime() {
   $('.time-block').each(function () {
   var myHour = parseInt($(this).attr("id").split("-")[1]);
 
-  if (currentHour < myHour) {
+  if (currentHour > myHour) {
     //add past
     $(this).addClass('past');
   } else if (currentHour === myHour) {
@@ -39,7 +39,7 @@ function getTime() {
     //add future
     $(this).removeClass('past');
     $(this).removeClass('present');
-    $(this).removeClass('future');
+    $(this).addClass('future');
   }
   })
 }
