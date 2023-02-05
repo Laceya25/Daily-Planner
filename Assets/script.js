@@ -18,7 +18,7 @@ $(document).ready(function() {
   //set var into local//
   localStorage.setitem(time, textEnter);
 })
-});
+
 
 function getTime() {
   //current-24hr clock//
@@ -28,7 +28,7 @@ function getTime() {
   $('.time-block').each(function () {
   var myHour = parseInt($(this).attr("id").split("-")[1]);
 
-  if (currentHour > myHour) {
+  if (currentHour < myHour) {
     //add past
     $(this).addClass('past');
   } else if (currentHour === myHour) {
@@ -44,12 +44,14 @@ function getTime() {
   })
 }
 
+//create GET to select local storage inputs and transfer to page 
 
-$(function () {
- 
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
-  //
-  // TODO: Add code to display the current date in the header of the page.
+$('#hour-9.description').var(localStorage.getItem('hour-9'));
+
+//testing calling the function
+getTime();
 });
+
+
+
+ 
