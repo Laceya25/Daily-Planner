@@ -17,7 +17,7 @@ $(document).ready(function() {
 
   //set var into local//
   localStorage.setitem(time, textEnter);
-})
+});
 
 
 function getTime() {
