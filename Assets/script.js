@@ -1,6 +1,6 @@
 // Date Display
 var todaysDate = dayjs();
-$('#todaysDate').text(todaysDate.format('MMMM, dddd D'));
+$('#todaysDate').text(todaysDate.format('dddd, MMMM D'));
 
 //make function availble after load//
 $(document).ready(function() {
